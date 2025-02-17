@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validació Formulari 2</title>
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.1/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.1/css/sharp-thin.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-duotone-solid.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-duotone-regular.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone-thin.css"
+    />
+    <script src="formulari.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="bg-white p-8 rounded-lg shadow-md w-96">
+      <h1 class="text-2xl font-bold text-center mb-4">
+        Validación de Formularios
+      </h1>
+      <form id="form" novalidate class="space-y-4">
+        <div>
+          <label for="name" class="block text-sm font-medium text-gray-700"
+            >Entre 3 y 5 letras:</label
+          >
+          <input
+            type="text"
+            id="name"
+            class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            minlength="3"
+            maxlength="5"
+            required
+          />
+          <span id="messageName" class="text-sm font-semibold"></span>
+        </div>
+
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700"
+            >Formato email válido:</label
+          >
+          <input
+            type="email"
+            id="email"
+            class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required
+          />
+          <span id="messageEmail" class="text-sm font-semibold"></span>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700"
+            >Selecciona 2 opciones:</label
+          >
+          <div class="flex space-x-4">
+            <input type="checkbox" name="options" value="1" /> Opción 1
+            <input type="checkbox" name="options" value="2" /> Opción 2
+            <input type="checkbox" name="options" value="3" /> Opción 3
+          </div>
+          <span id="messageCheckbox" class="text-sm font-semibold"></span>
+        </div>
+
+        <div>
+          <label for="select" class="block text-sm font-medium text-gray-700"
+            >Selecciona 2 opciones:</label
+          >
+          <select
+            id="select"
+            multiple
+            class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required
+          >
+            <option value="op1">Opción 1</option>
+            <option value="op2">Opción 2</option>
+            <option value="op3">Opción 3</option>
+          </select>
+          <span id="messageSelect" class="text-sm font-semibold"></span>
+        </div>
+
+        <div class="text-center">
+          <input
+            type="submit"
+            value="CHECK"
+            class="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-300 cursor-pointer w-full"
+          />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
